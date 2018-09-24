@@ -2,14 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+                        //window.addEventListener('load', function () {
+                        //    var rotates = document.getElementsByClassName('rotate');
+                        //    for (var i = 0; i < rotates.length; i++) {
+                        //        rotates[i].style.height = rotates[i].offsetWidth + 'px';
+                        //    }
+                        //});
+    </script>
     <title>Routing Sheet</title>
 
 </head>
 <body>
+    <nav class="navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="routing_sheet_output.html">Routing Sheet</a></li>
+                    <li><a href="sandbox.html">Sandbox</a></li>
+                </ul>
+                <ul class="nav navbar-collapse navbar-right">
+                    <li><input class="input-sm" type="search" name="search" id="search" size="9" /> <button class="btn-link" type="submit" id="search" name="search">Search</button><span class="glyphicon-search"></span>Find Job</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main>
-        <h1><a href="sandbox.html">Sandbox</a></h1>
-        <table id="t1" border="1">
+        <table id="t1" border="1" style="width: 1400px; margin: 15px">
             <colgroup>
                 <col style="width: 135px;" />
                 <col style="width: 135px;" />
@@ -28,26 +66,25 @@
                 <col style="width: 60px;">
                 <col />
                 <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
+                <col class="revision_code_numbers" />
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="26" style="font-size: 30px;">JOB ROUTING SHEET</th>
+                    <th colspan="26" style="font-size: 30px; text-align: center;">JOB ROUTING SHEET</th>
                 </tr>
             </thead>
-            <tr>
-                <th align="right">JOB#:</th>
-                <th></th>
-                <th></th>
+            <tr class="top_four_titles">
+                <th>JOB#:</th>
+                <th colspan="2"></th>
                 <th rowspan="4">
                     <div class="rotate">DEPT. 1 SHEAR</div>
                 </th>
@@ -86,35 +123,32 @@
                 </th>
                 <th colspan="9">Revision Code</th>
             </tr>
-            <tr>
+            <tr class="top_four_titles">
                 <th align="right">BUILDER:</th>
-                <th></th>
-                <th></th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
+                <th colspan="2"></th>
+                <th class="revision_code_numbers">1</th>
+                <th class="revision_code_numbers">2</th>
+                <th class="revision_code_numbers">3</th>
+                <th class="revision_code_numbers">4</th>
+                <th class="revision_code_numbers">5</th>
+                <th class="revision_code_numbers">6</th>
+                <th class="revision_code_numbers">7</th>
+                <th class="revision_code_numbers">8</th>
+                <th class="revision_code_numbers">9</th>
             </tr>
-            <tr>
+            <tr class="top_four_titles">
                 <th align="right">ISSUE:</th>
-                <th></th>
-                <th></th>
+                <th colspan="2"></th>
                 <th colspan="9"></th>
             </tr>
-            <tr>
+            <tr class="top_four_titles">
                 <th align="right">DATE:</th>
-                <th></th>
-                <th></th>
-                <th colspan="9"></th>
+                <th colspan="2"></th>
+                <td colspan="9"style="padding-left: 15px;"> RECEIVED BY: </td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="2">OMIT FABS:</th>
-                <th>STD. FAB SHIP/LIST</th>
+                <th colspan="2" style="font-size: 10px; vertical-align: top; text-align: left;">OMIT FABS:</th>
+                <th class="sub_heading">STD. FAB SHIP/LIST</th>
                 <td>2</td>
                 <td>1</td>
                 <td>1</td>
@@ -127,11 +161,11 @@
                 <td>6</td>
                 <td>1</td>
                 <td>27</td>
-                <td colspan="9"></td>
+                <td colspan="9" align="left"style="padding-left: 15px;">MFG: </td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="2">FAB SHIPPER PAGES:</th>
-                <th>GROUP 1</th>
+                <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
+                <th class="sub_heading">GROUP 1</th>
                 <td>2</td>
                 <td>1</td>
                 <td>1</td>
@@ -144,10 +178,10 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>7</td>
-                <td colspan="9"></td>
+                <td colspan="9" align="left"style="padding-left: 15px;">DATE: </td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="3">REF DETAILS:</th>
+                <th class="shipper_ref-details" colspan="3">REF DETAILS:</th>
                 <td>2</td>
                 <td>1</td>
                 <td>1</td>
@@ -160,11 +194,11 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>7</td>
-                <td colspan="9"></td>
+                <td colspan="9">ARE SEALS REQUIRED?</td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="2">FAB SHIPPER PAGES:</th>
-                <th>GROUP 2,3</th>
+                <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
+                <th class="sub_heading">GROUP 2,3</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -177,10 +211,14 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>4</td>
-                <td colspan="9"></td>
+                <td colspan="2">YES</td>
+                <td colspan="1"></td>
+                <td colspan="2">NO</td>
+                <td colspan="1"></td>
+                <td colspan="3"></td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="3">REF DETAILS:</th>
+                <th class="shipper_ref-details" colspan="3">REF DETAILS:</th>
                 <td class="fill"></td>
                 <td>1</td>
                 <td class="fill"></td>
@@ -193,11 +231,11 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>4</td>
-                <td colspan="9"></td>
+                <td colspan="9" align="left" style="padding-left: 15px;">STATE: </td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="2">FAB SHIPPER PAGES:</th>
-                <th>GROUP 4</th>
+                <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
+                <th class="sub_heading">GROUP 4</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -210,11 +248,11 @@
                 <td class="fill"></td>
                 <td>1</td>
                 <td>4</td>
-                <td colspan="9"></td>
+                <td colspan="9">ERECTION DWGS TO FOLLOW?</td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="2">FAB SHIPPER PAGES:</th>
-                <th>GROUP 5</th>
+                <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
+                <th class="sub_heading">GROUP 5</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -227,11 +265,15 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>2</td>
-                <td colspan="9"></td>
+                <td colspan="2">YES</td>
+                <td colspan="1"></td>
+                <td colspan="2">NO</td>
+                <td colspan="1"></td>
+                <td colspan="3"></td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="2">FAB SHIPPER PAGES:</th>
-                <th>GROUP 6</th>
+                <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
+                <th class="sub_heading">GROUP 6</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -244,10 +286,10 @@
                 <td>5</td>
                 <td class="fill"></td>
                 <td>5</td>
-                <td colspan="9"></td>
+                <td class="right-margin-text" colspan="9">NOTE: 2 COVER SHEETS</td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="3">REF DETAILS</th>
+                <th class="shipper_ref-details" colspan="3">REF DETAILS</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -260,11 +302,11 @@
                 <td>4</td>
                 <td class="fill"></td>
                 <td>4</td>
-                <td colspan="9"></td>
+                <td class="right-margin-text" colspan="9">MATERIAL SUMMARY</td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="2">FAB SHIPPER PAGES:</th>
-                <th>GROUP 7</th>
+                <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
+                <th class="sub_heading">GROUP 7</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -277,11 +319,11 @@
                 <td class="fill"></td>
                 <td>1</td>
                 <td>2</td>
-                <td colspan="9"></td>
+                <td class="right-margin-text" colspan="9"> ONE COPY TO: </td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="2">FAB SHIPPER PAGES:</th>
-                <th>GROUP 8</th>
+                <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
+                <th class="sub_heading">GROUP 8</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -294,10 +336,10 @@
                 <td class="fill"></td>
                 <td>1</td>
                 <td>1</td>
-                <td colspan="9"></td>
+                <td class="right-margin-text" colspan="9" align="left" style="padding-left: 15px;">CSR: </td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="3">PANEL CUTLIST</th>
+                <th class="shipper_ref-details" colspan="3">PANEL CUTLIST</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -310,10 +352,10 @@
                 <td>1</td>
                 <td>2</td>
                 <td>4</td>
-                <td colspan="9"></td>
+                <td class="right-margin-text" colspan="9">CUSTOMER SERVICE DIRECTOR</td>
             </tr>
             <tr align="center">
-                <th align="left" colspan="3">STOCK COIL SUMMARY</th>
+                <th class="shipper_ref-details" colspan="3">STOCK COIL SUMMARY</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -327,6 +369,54 @@
                 <td>1</td>
                 <td>3</td>
                 <td colspan="9"></td>
+            </tr>
+            <tr align="center">
+                <th align="left" colspan="3">DEPT. 25 INSPECTION</th>
+                <td colspan="11" align="left">1 SET OF SHIPPER AND DETAILS</td>
+                <td>1</td>
+                <td colspan="9"></td>
+            </tr>
+            <tr align="center">
+                <th align="left" colspan="3">DEPT. 19 SHIPPING</th>
+                <td colspan="11" align="left">1 SET OF SHIPPER AND MATERIAL SUMMARY</td>
+                <td>2</td>
+                <td colspan="9">ERECTION MANUAL REQUIRED</td>
+            </tr>
+            <tr align="center">
+                <th align="left" colspan="3">DEPT. 17 PROD. CONTROL</th>
+                <td colspan="11" align="left">1 SET OF DETAILS, 1 SET SHIPPER, ERECTION DWGS, AND SUMMARIES</td>
+                <td>1</td>
+                <td colspan="3" rowspan="2">KL2100</td>
+                <td colspan="3">SNAP SEAM</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr align="center">
+                <th align="left" colspan="3">DEPT. 10 WAREHOUSE</th>
+                <td colspan="11" align="left">2 SETS OF SHIPPERS</td>
+                <td>2</td>
+                <td colspan="3">MECH SEAM</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr align="center">
+                <th align="left" colspan="3">ERECTION PACKAGE</th>
+                <td colspan="11" align="left">1 SET OF SHIPPER AND ERECTION DWGS (KL/ROOFLOK BOOK IF REQ'D)</td>
+                <td>1</td>
+                <td colspan="3">SS360</td>
+                <td colspan="6"></td>
+            </tr>
+            <tr align="center">
+                <th align="left" colspan="3"></th>
+                <td colspan="11" align="left"></td>
+                <td>1</td>
+                <td colspan="3">ROOFLOK</td>
+                <td colspan="6"></td>
+            </tr>
+            <tr align="center">
+                <th align="left" colspan="3">Revision: 9/23/2018</th>
+                <td colspan="11" align="left"></td>
+                <td>1</td>
+                <td colspan="3">AWIP</td>
+                <td colspan="6"></td>
             </tr>
         </table>
     </main>

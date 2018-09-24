@@ -3,36 +3,75 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="Content/bootstrap-theme.css" />
-    <link rel="stylesheet" href="Content/bootstrap.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>PrintRoom Pro V2</title>
 </head>
 <body>
     <header>
-        <div id="logo">
-            <img id="Kirby_Logo" src="/images/kirby_new_logo.jpg" alt="Kirby Logo" />
-        </div>
         <div id="title">
             <h1>PrintRoom Pro V2</h1>
         </div>
         <div id="search_settings">
-            <label for="search">Search Existing Jobs</label>
-            <input type="search" id="search" name="search" />
-            <button class="btn-default" type="submit" name="search_submit" id="search_submit">Search</button>
+            <!--<label for="search">Search Existing Jobs</label>
+            <input type="search" id="search" name="search" />-->
+            <!-- <button class="btn-default" type="submit" name="search_submit" id="search_submit">Search</button>-->
         </div>
     </header>
-    <main>
-        <nav>
-            <h4><a href="routing_sheet_output.html">Routing Sheet Template</a> <a href="sandbox.html">Sandbox</a></h4>
-        </nav>
 
+    <nav class="navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="routing_sheet_output.html">Routing Sheet</a></li>
+                    <li><a href="sandbox.html">Sandbox</a></li>
+                </ul>
+                <ul class="nav navbar-collapse navbar-right">
+                    <li><input class="input-sm" type="search" name="search" id="search" size="9" /> <button class="btn-link" type="submit" id="search" name="search">Search</button><span class="glyphicon-search"></span>Find Job</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
         <section class="container">
             <fieldset class="col-sm-6" id="JobInfo">
                 <legend>Job Info</legend>
                 <h4>Job Number:  <input name="jobNumber" type="text" size="9" autofocus="autofocus" /></h4>
                 <h4>Builder: <u>Jones Construction</u></h4>
-                <h4>Issue: <input name="issue" type="number" size="3" min="0" max="99" value="0" /> Revision Code: <input name="revision" type="number" size="3" min="0" max="99" value="0" /></h4>
+                <h4>Issue: <input name="issue" type="number" size="3" min="0" max="99" value="0" /> </h4>
+                <h4>
+                    Revision Code:
+                    <select>
+                        <option value="0">N/A</option>
+                        <option value="1">Drafting Error</option>
+                        <option value="2">Engineering Error</option>
+                        <option value="3">C/S Error</option>
+                        <option value="4">Sale Error</option>
+                        <option value="5">Customer Change</option>
+                        <option value="6">Mfg Error/Request</option>
+                        <option value="7">Group Svc Error</option>
+                        <option value="8">Prod Ctrl Error</option>
+                        <option value="9">Prod Dev Error</option>
+                    </select>
+                </h4>
                 <h4>Date: <input id="date" type="date" /></h4>
                 <h4>CSR: <u>Jody Woodall</u></h4>
                 <input type="checkbox" id="seals" name="seals" value="seals" />
@@ -61,7 +100,7 @@
                 <label for="AWIP">AWIP</label><br />
             </fieldset>
 
-            <fieldset class="col-sm-6" id="GroupInfo">
+            <fieldset class="col-lg-6" id="GroupInfo">
                 <legend>Page Input</legend>
                 <h4>Group 1</h4>
                 Shipper Pages: <input name="group1_shipper" type="text" size="7" />
@@ -87,7 +126,7 @@
                 <h4>Group 8</h4>
                 Shipper Pages: <input name="group8_shipper" type="text" size="7" /><br /> <br />
 
-                <button class="btn-default" type="submit" name="Submit">Submit</button> <button class="btn-default"type="reset" name="Reset">Reset</button>
+                <button class="btn-default" type="submit" name="Submit">Submit</button> <button class="btn-default" type="reset" name="Reset">Reset</button>
             </fieldset>
         </section>
     </main>

@@ -4,87 +4,34 @@
     text-align: center;
 }
 
-h3 {
+.revision_code_numbers{
+    width: 30px;
+    text-align: center;
+}
+
+.top_four_titles{
+    height: 40px;
+}
+
+.sub_heading{
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.shipper_ref-details{
+    height: 40px;
+    font-size: 12px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.right-margin-text {
+    font-size: 12px;
 }
 
 #search_settings {
     text-align: right;
-}
-
-header {
-    /*margin-top: 55px;
-    height: 120px;*/
-}
-
-/*
-main {
-    background-color: lightgray;
-}
-
-nav {
-    background-color: lightgray;
-}
-
-aside {
-    background-color: lightgray;
-}*/
-
-#Kirby_Logo {
-    /*float: left;
-    display: inline-block;*/
-}
-
-legend {
-    /*font-size: 24px;
-    font-weight: bold;*/
-}
-
-fieldset {
-    /*width: 300px;*/
-    /*float: left;*/
-}
-
-#JobInfo {
-    /*width: 40%;
-    min-width: 300px;*/
-}
-
-#GroupInfo {
-    /*width: 40%;
-    min-width: 400px;*/
-}
-
-section {
-    /*width: auto;
-    height: auto;*/
-    /*border: solid 2px black;*/
-}
-
-form {
-}
-
-/*article {
-    background-color: lightgray;
-}
-
-footer {
-    background-color: lightgray;
-}*/
-
-table, th, td {
-    /*border: 1px solid black;
-    border-collapse: collapse;*/
-}
-
-#t1 th {
-    /*height: 40px;
-    font-size: 14px;*/
-}
-
-#t1 td {
-    /*height: 30px;
-    font-size: 18px;
-    vertical-align: top;*/
 }
 
 .rotate {
@@ -100,18 +47,12 @@ table, th, td {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
     /* Standard */
     transform: rotate(-90.0deg);
+    width: 60px;
+    vertical-align: bottom;
+    text-align: left;
 }
 
 .fill {
     background-color: darkgray;
 }
 
-#tbl1 {
-    /*border: solid 1px black;
-    border-collapse: collapse;
-    width: 400px;*/
-}
-
-#tbl2 {
-    /*width: 400px;*/
-}

@@ -2,10 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Sandbox</title>
 </head>
 <body>
+    <nav class="navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="routing_sheet_output.html">Routing Sheet</a></li>
+                    <li><a href="sandbox.html">Sandbox</a></li>
+                </ul>
+                <ul class="nav navbar-collapse navbar-right">
+                    <li><input class="input-sm" type="search" name="search" id="search" size="9" /> <button class="btn-link" type="submit" id="search" name="search">Search</button><span class="glyphicon-search"></span>Find Job</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main>
         <h1 class="h1_test">Test Text Here</h1>
         <h1 class="h1_test">More Text</h1>
