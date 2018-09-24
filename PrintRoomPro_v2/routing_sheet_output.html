@@ -47,14 +47,14 @@
         </div>
     </nav>
     <main>
-        <table id="t1" border="1" style="width: 1400px; margin: 15px">
+        <table id="t1" border="1">
             <colgroup>
                 <col style="width: 135px;" />
                 <col style="width: 135px;" />
                 <col />
                 <col style="width: 60px;">
                 <col style="width: 60px;">
-                <col style="width: 60px;">
+                <col style="width: 40px;">
                 <col style="width: 60px;">
                 <col style="width: 60px;">
                 <col style="width: 60px;">
@@ -79,49 +79,49 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="26" style="font-size: 30px; text-align: center;">JOB ROUTING SHEET</th>
+                    <th colspan="26" class="bold-bottom" style="font-size: 30px; text-align: center;">JOB ROUTING SHEET</th>
                 </tr>
             </thead>
             <tr class="top_four_titles">
                 <th>JOB#:</th>
                 <th colspan="2"></th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 1 SHEAR</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 1<br />SHEAR</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 11 DETAIL</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 11 <br />DETAIL</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 07 AUTO-WELD</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 07 <br />AUTO-WELD</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 08 FIT AND WELD</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 08 <br />FIT AND WELD</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 06 STRUCTURAL</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 06 <br />STRUCTURAL</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">BOLT AND SCREW</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">BOLT AND <br />SCREW</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 02 COLD-FORM</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 02 <br />COLD - FORM</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 28 ROD AND CABLE</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 28 <br />ROD AND CABLE</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 04 SHEETING</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 04 <br />SHEETING</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">DEPT. 03 TRIM</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate">DEPT. 03 <br />TRIM</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">PURCHASING</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate" style="margin-left: -10px;"><br />PURCHASING</div>
                 </th>
-                <th rowspan="4">
-                    <div class="rotate">TOTALS</div>
+                <th rowspan="4" valign="bottom">
+                    <div class="rotate" style="margin-left: -10px;"><br />TOTALS</div>
                 </th>
-                <th colspan="9">Revision Code</th>
+                <th colspan="9" style="border-right: solid 4px black;">Revision Code</th>
             </tr>
             <tr class="top_four_titles">
                 <th align="right">BUILDER:</th>
@@ -134,20 +134,20 @@
                 <th class="revision_code_numbers">6</th>
                 <th class="revision_code_numbers">7</th>
                 <th class="revision_code_numbers">8</th>
-                <th class="revision_code_numbers">9</th>
+                <th class="revision_code_numbers" style="border-right: solid 4px black;">9</th>
             </tr>
             <tr class="top_four_titles">
                 <th align="right">ISSUE:</th>
                 <th colspan="2"></th>
-                <th colspan="9"></th>
+                <th colspan="9" style="border-right: solid 4px black;"></th>
             </tr>
             <tr class="top_four_titles">
                 <th align="right">DATE:</th>
                 <th colspan="2"></th>
-                <td colspan="9"style="padding-left: 15px;"> RECEIVED BY: </td>
+                <td colspan="9"style="padding-left: 15px; border-right: solid 4px black;"> RECEIVED BY: </td>
             </tr>
             <tr align="center">
-                <th colspan="2" style="font-size: 10px; vertical-align: top; text-align: left;">OMIT FABS:</th>
+                <th colspan="2" id="omit_fabs"style="font-size: 10px; vertical-align: top; text-align: left;">OMIT FABS:</th>
                 <th class="sub_heading">STD. FAB SHIP/LIST</th>
                 <td>2</td>
                 <td>1</td>
@@ -161,7 +161,7 @@
                 <td>6</td>
                 <td>1</td>
                 <td>27</td>
-                <td colspan="9" align="left"style="padding-left: 15px;">MFG: </td>
+                <td colspan="9" align="left"style="padding-left: 15px; border-right: solid 4px black;">MFG: </td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
@@ -178,7 +178,7 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>7</td>
-                <td colspan="9" align="left"style="padding-left: 15px;">DATE: </td>
+                <td colspan="9" align="left"style="padding-left: 15px; border-right: solid 4px black;">DATE: </td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="3">REF DETAILS:</th>
@@ -194,7 +194,7 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>7</td>
-                <td colspan="9">ARE SEALS REQUIRED?</td>
+                <td colspan="9" style="border-right: solid 4px black;">ARE SEALS REQUIRED?</td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
@@ -215,7 +215,7 @@
                 <td colspan="1"></td>
                 <td colspan="2">NO</td>
                 <td colspan="1"></td>
-                <td colspan="3"></td>
+                <td colspan="3" style="border-right: solid 4px black;"></td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="3">REF DETAILS:</th>
@@ -231,7 +231,7 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>4</td>
-                <td colspan="9" align="left" style="padding-left: 15px;">STATE: </td>
+                <td colspan="9" align="left" style="padding-left: 15px; border-right: solid 4px black;">STATE: </td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
@@ -248,7 +248,7 @@
                 <td class="fill"></td>
                 <td>1</td>
                 <td>4</td>
-                <td colspan="9">ERECTION DWGS TO FOLLOW?</td>
+                <td colspan="9" style="border-right: solid 4px black;">ERECTION DWGS TO FOLLOW?</td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
@@ -269,7 +269,7 @@
                 <td colspan="1"></td>
                 <td colspan="2">NO</td>
                 <td colspan="1"></td>
-                <td colspan="3"></td>
+                <td colspan="3" style="border-right: solid 4px black;"></td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
@@ -289,7 +289,7 @@
                 <td class="right-margin-text" colspan="9">NOTE: 2 COVER SHEETS</td>
             </tr>
             <tr align="center">
-                <th class="shipper_ref-details" colspan="3">REF DETAILS</th>
+                <th class="shipper_ref-details" colspan="3">REF DETAILS:</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -354,7 +354,7 @@
                 <td>4</td>
                 <td class="right-margin-text" colspan="9">CUSTOMER SERVICE DIRECTOR</td>
             </tr>
-            <tr align="center">
+            <tr align="center" class="bold-bottom">
                 <th class="shipper_ref-details" colspan="3">STOCK COIL SUMMARY</th>
                 <td class="fill"></td>
                 <td class="fill"></td>
@@ -368,55 +368,55 @@
                 <td>1</td>
                 <td>1</td>
                 <td>3</td>
-                <td colspan="9"></td>
+                <td colspan="9" style="border-bottom: solid 1px black; border-right: solid 4px black;"></td>
             </tr>
             <tr align="center">
                 <th align="left" colspan="3">DEPT. 25 INSPECTION</th>
                 <td colspan="11" align="left">1 SET OF SHIPPER AND DETAILS</td>
                 <td>1</td>
-                <td colspan="9"></td>
+                <td colspan="9" style="border-right: solid 4px black;"></td>
             </tr>
             <tr align="center">
                 <th align="left" colspan="3">DEPT. 19 SHIPPING</th>
                 <td colspan="11" align="left">1 SET OF SHIPPER AND MATERIAL SUMMARY</td>
                 <td>2</td>
-                <td colspan="9">ERECTION MANUAL REQUIRED</td>
+                <td colspan="9" style="border-right: solid 4px black;">ERECTION MANUAL REQUIRED</td>
             </tr>
             <tr align="center">
                 <th align="left" colspan="3">DEPT. 17 PROD. CONTROL</th>
                 <td colspan="11" align="left">1 SET OF DETAILS, 1 SET SHIPPER, ERECTION DWGS, AND SUMMARIES</td>
                 <td>1</td>
                 <td colspan="3" rowspan="2">KL2100</td>
-                <td colspan="3">SNAP SEAM</td>
-                <td colspan="3"></td>
+                <td colspan="3" style="font-size: 10px;">SNAP SEAM</td>
+                <td colspan="3" style="border-right: solid 4px black;"></td>
             </tr>
             <tr align="center">
                 <th align="left" colspan="3">DEPT. 10 WAREHOUSE</th>
                 <td colspan="11" align="left">2 SETS OF SHIPPERS</td>
                 <td>2</td>
-                <td colspan="3">MECH SEAM</td>
-                <td colspan="3"></td>
+                <td colspan="3" style="font-size: 10px;">MECH SEAM</td>
+                <td colspan="3" style="border-right: solid 4px black;"></td>
             </tr>
             <tr align="center">
                 <th align="left" colspan="3">ERECTION PACKAGE</th>
                 <td colspan="11" align="left">1 SET OF SHIPPER AND ERECTION DWGS (KL/ROOFLOK BOOK IF REQ'D)</td>
                 <td>1</td>
                 <td colspan="3">SS360</td>
-                <td colspan="6"></td>
+                <td colspan="6" style="border-right: solid 4px black;"></td>
             </tr>
             <tr align="center">
                 <th align="left" colspan="3"></th>
                 <td colspan="11" align="left"></td>
                 <td>1</td>
-                <td colspan="3">ROOFLOK</td>
-                <td colspan="6"></td>
+                <td colspan="3" style="font-size: 10px;">ROOFLOK</td>
+                <td colspan="6" style="border-right: solid 4px black;"></td>
             </tr>
             <tr align="center">
                 <th align="left" colspan="3">Revision: 9/23/2018</th>
                 <td colspan="11" align="left"></td>
                 <td>1</td>
                 <td colspan="3">AWIP</td>
-                <td colspan="6"></td>
+                <td colspan="6" style="border-right: solid 4px black;"></td>
             </tr>
         </table>
     </main>

@@ -1,7 +1,32 @@
-﻿h1 {
+﻿#t1 {
+    padding-left: 15px;
+    width: 1350px;
+    margin: 15px;
+    border: solid 4px black;
+}
+h1 {
     /*position: absolute;
     transform: translate(50%);*/
     text-align: center;
+}
+
+#omit_fabs {
+    font-size: 10px;
+    vertical-align: top;
+    text-align: left;
+    height: 40px;
+}
+
+.bold-bottom{
+    border-bottom: solid 3px black;
+}
+
+.bold-left{
+    border-left: solid 3px black;
+}
+
+.bold-right{
+    border-right: solid 3px black;
 }
 
 .revision_code_numbers{
@@ -10,7 +35,8 @@
 }
 
 .top_four_titles{
-    height: 40px;
+    height: 35px;
+    text-align: right;
 }
 
 .sub_heading{
@@ -28,6 +54,7 @@
 
 .right-margin-text {
     font-size: 12px;
+     border-right: solid 4px black;
 }
 
 #search_settings {
@@ -48,8 +75,9 @@
     /* Standard */
     transform: rotate(-90.0deg);
     width: 60px;
-    vertical-align: bottom;
     text-align: left;
+    white-space: nowrap;
+    margin-bottom: 15px;
 }
 
 .fill {
