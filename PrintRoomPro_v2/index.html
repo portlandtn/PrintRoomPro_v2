@@ -12,17 +12,18 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--Local JavaScript-->
+    <script src="JavaScript.js"></script>
+    <script>
+       
+    </script>
     <title>PrintRoom Pro V2</title>
 </head>
 <body>
     <header>
         <div id="title">
             <h1>PrintRoom Pro V2</h1>
-        </div>
-        <div id="search_settings">
-            <!--<label for="search">Search Existing Jobs</label>
-            <input type="search" id="search" name="search" />-->
-            <!-- <button class="btn-default" type="submit" name="search_submit" id="search_submit">Search</button>-->
         </div>
     </header>
 
@@ -52,82 +53,83 @@
 
     <main>
         <section class="container">
-            <fieldset class="col-sm-6" id="JobInfo">
-                <legend>Job Info</legend>
-                <h4>Job Number:  <input name="jobNumber" type="text" size="9" autofocus="autofocus" /></h4>
-                <h4>Builder: <u>Jones Construction</u></h4>
-                <h4>Issue: <input name="issue" type="number" size="3" min="0" max="99" value="0" /> </h4>
-                <h4>
-                    Revision Code:
-                    <select>
-                        <option value="0">N/A</option>
-                        <option value="1">Drafting Error</option>
-                        <option value="2">Engineering Error</option>
-                        <option value="3">C/S Error</option>
-                        <option value="4">Sale Error</option>
-                        <option value="5">Customer Change</option>
-                        <option value="6">Mfg Error/Request</option>
-                        <option value="7">Group Svc Error</option>
-                        <option value="8">Prod Ctrl Error</option>
-                        <option value="9">Prod Dev Error</option>
-                    </select>
-                </h4>
-                <h4>Date: <input id="date" type="date" /></h4>
-                <h4>CSR: <u>Jody Woodall</u></h4>
-                <input type="checkbox" id="seals" name="seals" value="seals" />
-                <label for="seals">Drawings Require Seals</label> <br />
-                State: <u>TN</u><br /><br />
+            <form name="submit-info" id="submit-form" action="/action_page.php" method="get">
+                <fieldset class="col-sm-6" id="JobInfo">
+                    <legend>Job Info</legend>
+                    <h4>Job Number:  <input name="jobNumber" type="text" size="9" autofocus="autofocus" /></h4>
+                    <h4>Builder: <u><var id="Bldr_name">Bldr</var></u></h4>
+                    <h4>Issue: <input name="issue" type="number" size="3" min="0" max="99" value="0" /> </h4>
+                    <h4>
+                        Revision Code:
+                        <select>
+                            <option value="0">N/A</option>
+                            <option value="1">Drafting Error</option>
+                            <option value="2">Engineering Error</option>
+                            <option value="3">C/S Error</option>
+                            <option value="4">Sale Error</option>
+                            <option value="5">Customer Change</option>
+                            <option value="6">Mfg Error/Request</option>
+                            <option value="7">Group Svc Error</option>
+                            <option value="8">Prod Ctrl Error</option>
+                            <option value="9">Prod Dev Error</option>
+                        </select>
+                    </h4>
+                    <h4>Date: <input id="date" type="date" /></h4>
+                    <h4>CSR: <u><var id="CSR_name">CSR</var></u></h4>
+                    <input type="checkbox" id="seals" name="seals" value="seals" />
+                    <label for="seals">Drawings Require Seals</label> <br />
+                    State: <u>TN</u><br /><br />
 
-                <input type="checkbox" id="dwgs2follow" name="dwgs2follow" value="dwgs2follow" />
-                <label for="dwgs2follow">Erection Drawings to Follow</label><br />
+                    <input type="checkbox" id="dwgs2follow" />
+                    <label for="dwgs2follow">Erection Drawings to Follow</label><br />
 
-                <input type="checkbox" id="manual" name="manual" value="manual" />
-                <label for="manual">Send Manual</label><br />
+                    <input type="checkbox" id="manual" name="manual" onclick="show_hide_manual_checkboxes()"/>
+                    <label for="manual">Send Manual</label><br />
 
-                <input type="checkbox" id="KL2100s" name="KL2100s" value="KL2100s" />
-                <label for="KL2100s">KL2100 Snap</label>
+                    <input type="checkbox" id="KL2100s" style="display: none;"/>
+                    <label id="label_KL2100s" for="KL2100s" style="display: none;">KL2100 Snap</label>
 
-                <input type="checkbox" id="KL2100m" name="KL2100m" value="KL2100m" />
-                <label for="KL2100m">KL2100 Mech</label><br />
+                    <input type="checkbox" id="KL2100m" style="display: none;"/>
+                    <label id="label_KL2100m" for="KL2100m" style="display: none;">KL2100 Mech</label><br />
 
-                <input type="checkbox" id="SS360" name="SS360" value="SS360" />
-                <label for="SS360">SS360</label><br />
+                    <input type="checkbox" id="SS360" style="display: none;" />
+                    <label id="label_SS360" for="SS360" style="display: none;">SS360</label><br />
 
-                <input type="checkbox" id="RoofLok" name="RoofLok" value="RoofLok" />
-                <label for="RoofLok">RoofLok</label><br />
+                    <input type="checkbox" id="RoofLok" style="display: none;"/>
+                    <label id="label_RoofLok" for="RoofLok" style="display: none;">RoofLok</label><br />
 
-                <input type="checkbox" id="AWIP" name="AWIP" value="AWIP" />
-                <label for="AWIP">AWIP</label><br />
-            </fieldset>
+                    <input type="checkbox" id="AWIP" style="display: none;"/>
+                    <label id="label_AWIP" for="AWIP" style="display: none;">AWIP</label><br />
+                </fieldset>
 
-            <fieldset class="col-lg-6" id="GroupInfo">
-                <legend>Page Input</legend>
-                <h4>Group 1</h4>
-                Shipper Pages: <input name="group1_shipper" type="text" size="7" />
-                Ref Details: <input name="group1_details" type="text" size="7" /><br />
+                <fieldset class="col-lg-6" id="GroupInfo">
+                    <legend>Page Input</legend>
+                    <h4>Group 1</h4>
+                    Shipper Pages: <input name="group1_shipper" type="text" size="7" />
+                    Ref Details: <input name="group1_details" type="text" size="7" /><br />
 
-                <h4>Groups 2, 3</h4>
-                Shipper Pages: <input name="group2-3_shipper" type="text" size="7" />
-                Ref Details: <input name="group2-3_details" type="text" size="7" /><br />
+                    <h4>Groups 2, 3</h4>
+                    Shipper Pages: <input name="group2-3_shipper" type="text" size="7" />
+                    Ref Details: <input name="group2-3_details" type="text" size="7" /><br />
 
-                <h4>Group 4</h4>
-                Shipper Pages: <input name="group4_shipper" type="text" size="7" /><br />
+                    <h4>Group 4</h4>
+                    Shipper Pages: <input name="group4_shipper" type="text" size="7" /><br />
 
-                <h4>Group 5</h4>
-                Shipper Pages: <input name="group5_shipper" type="text" size="7" /><br />
+                    <h4>Group 5</h4>
+                    Shipper Pages: <input name="group5_shipper" type="text" size="7" /><br />
 
-                <h4>Group 6</h4>
-                Shipper Pages: <input name="group6_shipper" type="text" size="7" />
-                Ref Details: <input name="group6_details" type="text" size="7" /><br />
+                    <h4>Group 6</h4>
+                    Shipper Pages: <input name="group6_shipper" type="text" size="7" />
+                    Ref Details: <input name="group6_details" type="text" size="7" /><br />
 
-                <h4>Group 7</h4>
-                Shipper Pages: <input name="group7_shipper" type="text" size="7" /><br />
+                    <h4>Group 7</h4>
+                    Shipper Pages: <input name="group7_shipper" type="text" size="7" /><br />
 
-                <h4>Group 8</h4>
-                Shipper Pages: <input name="group8_shipper" type="text" size="7" /><br /> <br />
-
-                <button class="btn-default" type="submit" name="Submit">Submit</button> <button class="btn-default" type="reset" name="Reset">Reset</button>
-            </fieldset>
+                    <h4>Group 8</h4>
+                    Shipper Pages: <input name="group8_shipper" type="text" size="7" /><br /> <br />
+                    <button class="btn-default" type="submit" name="Submit">Submit</button> <button class="btn-default" type="reset" name="Reset">Reset</button>
+                </fieldset>
+            </form>
         </section>
     </main>
     <footer></footer>

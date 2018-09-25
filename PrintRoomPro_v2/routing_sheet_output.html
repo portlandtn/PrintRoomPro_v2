@@ -11,18 +11,14 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-                        //window.addEventListener('load', function () {
-                        //    var rotates = document.getElementsByClassName('rotate');
-                        //    for (var i = 0; i < rotates.length; i++) {
-                        //        rotates[i].style.height = rotates[i].offsetWidth + 'px';
-                        //    }
-                        //});
-    </script>
     <title>Routing Sheet</title>
-
 </head>
 <body>
+    <header>
+        <div id="title">
+            <h1>PrintRoom Pro V2</h1>
+        </div>
+    </header>
     <nav class="navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -83,7 +79,7 @@
                 </tr>
             </thead>
             <tr class="top_four_titles">
-                <th>JOB#:</th>
+                <th style="text-align:right;">JOB#:</th>
                 <th colspan="2"></th>
                 <th rowspan="4" valign="bottom">
                     <div class="rotate">DEPT. 1<br />SHEAR</div>
@@ -124,7 +120,7 @@
                 <th colspan="9" style="border-right: solid 4px black;">Revision Code</th>
             </tr>
             <tr class="top_four_titles">
-                <th align="right">BUILDER:</th>
+                <th style="text-align:right;">BUILDER:</th>
                 <th colspan="2"></th>
                 <th class="revision_code_numbers">1</th>
                 <th class="revision_code_numbers">2</th>
@@ -137,17 +133,17 @@
                 <th class="revision_code_numbers" style="border-right: solid 4px black;">9</th>
             </tr>
             <tr class="top_four_titles">
-                <th align="right">ISSUE:</th>
+                <th style="text-align:right;">ISSUE:</th>
                 <th colspan="2"></th>
                 <th colspan="9" style="border-right: solid 4px black;"></th>
             </tr>
             <tr class="top_four_titles">
-                <th align="right">DATE:</th>
+                <th style="text-align: right;">DATE:</th>
                 <th colspan="2"></th>
-                <td colspan="9"style="padding-left: 15px; border-right: solid 4px black;"> RECEIVED BY: </td>
+                <td colspan="9" align="left" style="padding-left: 15px; border-right: solid 4px black;"> RECEIVED BY: </td>
             </tr>
             <tr align="center">
-                <th colspan="2" id="omit_fabs"style="font-size: 10px; vertical-align: top; text-align: left;">OMIT FABS:</th>
+                <th colspan="2" id="omit_fabs" style="font-size: 10px; vertical-align: top; text-align: left;">OMIT FABS:</th>
                 <th class="sub_heading">STD. FAB SHIP/LIST</th>
                 <td>2</td>
                 <td>1</td>
@@ -161,7 +157,7 @@
                 <td>6</td>
                 <td>1</td>
                 <td>27</td>
-                <td colspan="9" align="left"style="padding-left: 15px; border-right: solid 4px black;">MFG: </td>
+                <td colspan="9" align="left" style="padding-left: 15px; border-right: solid 4px black;">MFG: </td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="2">FAB SHIPPER PAGES:</th>
@@ -178,7 +174,7 @@
                 <td class="fill"></td>
                 <td class="fill"></td>
                 <td>7</td>
-                <td colspan="9" align="left"style="padding-left: 15px; border-right: solid 4px black;">DATE: </td>
+                <td colspan="9" align="left" style="padding-left: 15px; border-right: solid 4px black;">DATE: </td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="3">REF DETAILS:</th>
@@ -336,7 +332,7 @@
                 <td class="fill"></td>
                 <td>1</td>
                 <td>1</td>
-                <td class="right-margin-text" colspan="9" align="left" style="padding-left: 15px;">CSR: </td>
+                <td id="CSR_routing_sheet" class="right-margin-text" colspan="9" align="left" style="padding-left: 15px;">CSR: </td>
             </tr>
             <tr align="center">
                 <th class="shipper_ref-details" colspan="3">PANEL CUTLIST</th>
