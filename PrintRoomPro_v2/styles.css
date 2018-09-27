@@ -41,6 +41,7 @@ h1 {
     font-size: 12px;
     font-weight: 700;
     text-align: center;
+    line-height: normal;
 }
 
 .shipper_ref-details{
@@ -48,6 +49,7 @@ h1 {
     font-size: 12px;
     vertical-align: top;
     text-align: left;
+    line-height: 70%;
 }
 
 .right-margin-text {

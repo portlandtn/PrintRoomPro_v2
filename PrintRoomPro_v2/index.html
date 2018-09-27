@@ -16,7 +16,7 @@
     <!--Local JavaScript-->
     <script src="JavaScript.js"></script>
     <script>
-       
+
     </script>
     <title>PrintRoom Pro V2</title>
 </head>
@@ -53,15 +53,15 @@
 
     <main>
         <section class="container">
-            <form name="submit-info" id="submit-form" action="/action_page.php" method="get">
+            <form name="submit-info" id="submit-form">
                 <fieldset class="col-sm-6" id="JobInfo">
                     <legend>Job Info</legend>
-                    <h4>Job Number:  <input name="jobNumber" type="text" size="9" autofocus="autofocus" /></h4>
-                    <h4>Builder: <u><var id="Bldr_name">Bldr</var></u></h4>
-                    <h4>Issue: <input name="issue" type="number" size="3" min="0" max="99" value="0" /> </h4>
+                    <h4>Job Number:  <input id="jobNumber" type="text" size="9" autofocus="autofocus" /></h4>
+                    <h4>Builder: <u><var class="bldrName">Bldr</var></u></h4>
+                    <h4>Issue: <input id="issue" type="number" size="3" min="0" max="99" value="0" /> </h4>
                     <h4>
                         Revision Code:
-                        <select>
+                        <select id="revisionCode">
                             <option value="0">N/A</option>
                             <option value="1">Drafting Error</option>
                             <option value="2">Engineering Error</option>
@@ -74,31 +74,31 @@
                             <option value="9">Prod Dev Error</option>
                         </select>
                     </h4>
-                    <h4>Date: <input id="date" type="date" /></h4>
-                    <h4>CSR: <u><var id="CSR_name">CSR</var></u></h4>
-                    <input type="checkbox" id="seals" name="seals" value="seals" />
-                    <label for="seals">Drawings Require Seals</label> <br />
-                    State: <u>TN</u><br /><br />
-
+                    <h4>Date: <input id="currentDate" type="date" /></h4>
+                    <h4>CSR: <u><var class="CSR_name">CSR</var></u></h4>
+                    <input type="checkbox" id="chk_seals" onclick="show_hide_StateSeal()"/>
+                    <label for="chk_seals">Drawings Require Seals</label> <br />
+                    <h4 id="state" style="display: none;">State: <u><var id="state_initials">state</var></u></h4><br />
+                    
                     <input type="checkbox" id="dwgs2follow" />
                     <label for="dwgs2follow">Erection Drawings to Follow</label><br />
 
-                    <input type="checkbox" id="manual" name="manual" onclick="show_hide_manual_checkboxes()"/>
+                    <input type="checkbox" id="manual" onclick="show_hide_manual_checkboxes()" />
                     <label for="manual">Send Manual</label><br />
 
-                    <input type="checkbox" id="KL2100s" style="display: none;"/>
+                    <input type="checkbox" id="KL2100s" style="display: none;" />
                     <label id="label_KL2100s" for="KL2100s" style="display: none;">KL2100 Snap</label>
 
-                    <input type="checkbox" id="KL2100m" style="display: none;"/>
+                    <input type="checkbox" id="KL2100m" style="display: none;" />
                     <label id="label_KL2100m" for="KL2100m" style="display: none;">KL2100 Mech</label><br />
 
                     <input type="checkbox" id="SS360" style="display: none;" />
                     <label id="label_SS360" for="SS360" style="display: none;">SS360</label><br />
 
-                    <input type="checkbox" id="RoofLok" style="display: none;"/>
+                    <input type="checkbox" id="RoofLok" style="display: none;" />
                     <label id="label_RoofLok" for="RoofLok" style="display: none;">RoofLok</label><br />
 
-                    <input type="checkbox" id="AWIP" style="display: none;"/>
+                    <input type="checkbox" id="AWIP" style="display: none;" />
                     <label id="label_AWIP" for="AWIP" style="display: none;">AWIP</label><br />
                 </fieldset>
 
@@ -127,10 +127,27 @@
 
                     <h4>Group 8</h4>
                     Shipper Pages: <input name="group8_shipper" type="text" size="7" /><br /> <br />
-                    <button class="btn-default" type="submit" name="Submit">Submit</button> <button class="btn-default" type="reset" name="Reset">Reset</button>
+                    <button class="btn-default" type="submit" name="Submit" onclick="submit_action">Submit</button> <button class="btn-default" type="reset" name="Reset">Reset</button>
                 </fieldset>
             </form>
         </section>
+        <!--THIS SECTION OF CODE WILL HANDLE A CONNECTION TO THE DATABASE EVENTUALLY TO HOPEFULLY RETURN THE FOLLOWING VALUES: JOB NUMBER, CSR, SEALING STATE-->
+        <!--<?php
+        $servername = "localhost";
+        $username = "username";
+        $password = "password";
+
+        try {
+        $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+        }
+        catch(PDOException $e)
+        {
+        echo "Connection failed: " . $e->getMessage();
+        }
+        ?>-->
     </main>
     <footer></footer>
 </body>
